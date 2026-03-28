@@ -1,0 +1,15 @@
+# PDF Merger Development Rules
+
+## UI/UX Standards
+- **Premium Aesthetics**: Always adhere to the HSL-based design system and glassmorphism.
+- **Micro-animations**: Use `framer-motion` for all state transitions (list removals, reordering, status messages).
+- **Responsive**: Ensure the layout works seamlessly on mobile and desktop.
+
+## Technical Standards
+- **Client-Side Only**: Never send PDF data to a server. All manipulation must happen in the browser using `pdf-lib`.
+- **Error Handling**: Provide clear, user-friendly error messages for invalid files or failed merges.
+- **Performance**: Use `Web Workers` if merging becomes a performance bottleneck for very large files.
+
+## Workflow
+- Before any change to the PDF logic, run the `/validate-pdf` workflow.
+- Maintain the `README.md` with up-to-date Node.js and Vite instructions.
